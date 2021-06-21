@@ -12,8 +12,9 @@ app.use(bodyParser.json());
 app.use(cors());
 const port = 5000
 
-// const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.dyepr.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
-// const client = new MongoClient(uri, { useNewUrlParser: true}, {useUnifiedTopology: true });
+app.get('/' , (req, res)=>{
+  res.send("Database connection is workinggggg")
+})
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.rg61y.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 console.log(uri)
